@@ -1,0 +1,10 @@
+<h2>List of flats</h2>
+
+<% @flats.each do |flat| %>
+  <div>
+    <h3 class="title"><%= flat['name'] %> (id: <%= flat['id'] %>)</h3>
+    <!--<img src="<%= flat['imageUrl'] %>" width="300" >-->
+    <%= image_tag flat['imageUrl'], width: 300, class: 'flat-image' %>
+    <p><%= flat['price'] %> <%= flat['priceCurrency'] %></p>
+  </div>
+<% end %>
